@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color:antiquewhite;
+}
+
+/* navigation bar section  */
+ul {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    list-style: none;
+    padding: 8px;
+}
+ul li {
+    margin: 0 16px;
+    justify-content: space-between;
+    
+}
+.brand {
+    display: flex;
+    align-items: center;
+}
+.brand img {
+    height: 45px;
+    margin: 0 8px;
+}
+
+/* Song container / main container section  */
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://cdn.pixabay.com/photo/2016/01/27/15/35/heart-1164739_1280.jpg");
+    background-size: cover;
+    color: white;
+    height: 75vh;
+    width: 70%;
+    margin: 34px auto;
+    border-radius: 20px;
+}
+.container h1 {
+    margin: 0 auto;
+}
+.playList {
+    display: flex;
+}
+.songList {
+    background-color: rgba(277, 277, 277, 0.2);
+    border-radius: 14px;
+    width: 60%;
+    margin: 34px;
+    padding: 8px 34px;
+}
+.song:first-child{
+    border-top: 1px dotted white;
+}
+.song {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted white;
+}
+.song span{
+    padding-top: 10px;
+}
+.songList img {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+.song i{
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.playingSong {
+    margin: 34px;
+    padding: 24px 16px;
+    text-align: center;
+    width: 40%;
+    background-color: rgba(277, 277, 277, 0.2);
+    border-radius: 14px;
+}
+.playingSong #gif {
+    height: 25px;
+    width: 100%;
+    margin-top: 24px;
+    opacity: 0;
+    transition: 2s ease-in;
+}
+.playingSong #myProgress{ 
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.playingSong i{ 
+    margin-top: 8px;
+    cursor: pointer;
+}
+.playingSong .song p,.playingSong .song p span  {
+    margin: 16px;
+}
+
+/* footer section  */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    padding: 16px;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) and (min-width : 320px) {
+    .container {
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+        height: fit-content;
+        font-size: small;
+    }
+    .container h1{
+        font-size:x-large;
+    }
+    footer{
+        border-top: 1px dotted white;
+        padding: 0;
+        margin: 0;
+    }
+    .playList {
+        flex-direction: column;
+    }
+    .songList, .playingSong {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .songList img {
+        width: 30px;
+        height: 30px;
+    }
+    .playingSong {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: #000;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+    }
+    .playingSong #masterSongImage {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid gray;
+        margin-right: 16px;
+    }
+    .playingSong #gif{ 
+        display: none;        
+    }
+    .playingSong p, .playingSong p span {
+        font-size:small;
+        margin: auto;
+    }
+    #masterSongName {
+        padding-top: 11px;
+    }
+    .playingSong #myProgress {
+        width: 25%;
+        margin: auto 12px;
+    }
+    .playingSong i {
+        font-size:x-large;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width : 1132px){
+    .container {
+        margin: 0;;
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+    }
+    .playList {
+        flex-direction: column;
+    }
+    .songList, .playingSong {
+        width: 100%;
+        margin: 0;
+    }
+    .playingSong {
+        background: #000;
+        padding: 10px;
+        display: flex;
+        font-size: small;
+        margin: 0;
+        align-items: center;
+        border-radius: 0;
+    }
+    .playingSong #myProgress {
+        width: 45%;
+        margin: 0 8px;
+    }
+    .playingSong #gif {
+        width: 10%;
+    }
+    .playingSong #masterSongImage {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid gray;
+        margin-right: 16px;
+    }
+    
+}
